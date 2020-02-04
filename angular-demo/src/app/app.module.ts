@@ -9,11 +9,14 @@ import {PhoneService} from './phone.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PhoneListComponent } from './phone-list/phone-list.component';
 import {FormsModule} from '@angular/forms';
+import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
+import { CheckmarkPipe } from './checkmark.pipe';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree): boolean {
     const shouldProcess = url.toString() === '/home' ||
                           url.toString() === '/phones' ||
+                          url.toString().startsWith('/phones/') ||
                           url.toString() === '/';
     console.log('CustomHandlingStrategy.shouldProcessUrl shouldProcess:', shouldProcess, url.toString());
     return shouldProcess;
@@ -32,7 +35,9 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
   declarations: [
     AppComponent,
     HomeComponent,
-    PhoneListComponent
+    PhoneListComponent,
+    PhoneDetailComponent,
+    CheckmarkPipe
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,10 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
       {
         path: 'phones',
         component: PhoneListComponent
+      },
+      {
+        path: 'phones/:id',
+        component: PhoneDetailComponent
       },
       {
         path: '',

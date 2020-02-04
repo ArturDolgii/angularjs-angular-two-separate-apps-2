@@ -39,10 +39,7 @@
               "../angular-phonecat/app/app.module.js",
               "../angular-phonecat/app/app.config.js",
               "../angular-phonecat/app/app.animations.js",
-              "../angular-phonecat/app/core/core.module.js",
-              "../angular-phonecat/app/core/checkmark/checkmark.filter.js",
-              "../angular-phonecat/app/phone-detail/phone-detail.module.js",
-              "../angular-phonecat/app/phone-detail/phone-detail.component.js"
+              "../angular-phonecat/app/core/core.module.js"
             ]
           },
           "configurations": {
