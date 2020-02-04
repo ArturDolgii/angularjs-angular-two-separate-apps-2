@@ -5,8 +5,6 @@ import {Observable} from 'rxjs';
 import IPhoneDetail from './interfaces/IPhoneDetail';
 import {downgradeInjectable} from '@angular/upgrade/static';
 
-declare var angular;
-
 @Injectable({
   providedIn: 'root'
 })
@@ -21,5 +19,3 @@ export class PhoneService {
     return this.http.get<IPhoneDetail>(`angular-phonecat/app/phones/${id}.json`);
   }
 }
-
-angular.module('core.phone', []).factory('Phone', downgradeInjectable(PhoneService));

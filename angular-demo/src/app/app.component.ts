@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,8 @@ import {UpgradeModule} from '@angular/upgrade/static';
 export class AppComponent implements OnInit {
   title = 'angular-demo';
 
-  constructor(private upgrade: UpgradeModule) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.upgrade.bootstrap(document.body, ['phonecatApp']);
   }
 }

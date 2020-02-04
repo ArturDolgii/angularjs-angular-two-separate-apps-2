@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {UpgradeModule} from '@angular/upgrade/static';
 import { HomeComponent } from './home/home.component';
 import {RouterModule, UrlHandlingStrategy, UrlTree} from '@angular/router';
 import {PhoneService} from './phone.service';
@@ -41,7 +40,6 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
   ],
   imports: [
     BrowserModule,
-    UpgradeModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([

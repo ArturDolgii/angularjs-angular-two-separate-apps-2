@@ -30,17 +30,7 @@
               "../angular-phonecat/app/app.animations.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "../angular-phonecat/app/lib/jquery/dist/jquery.js",
-              "../angular-phonecat/app/lib/angular/angular.js",
-              "../angular-phonecat/app/lib/angular-animate/angular-animate.js",
-              "../angular-phonecat/app/lib/angular-resource/angular-resource.js",
-              "../angular-phonecat/app/lib/angular-route/angular-route.js",
-              "../angular-phonecat/app/app.module.js",
-              "../angular-phonecat/app/app.config.js",
-              "../angular-phonecat/app/app.animations.js",
-              "../angular-phonecat/app/core/core.module.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
