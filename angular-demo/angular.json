@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "../",
       "prefix": "app",
       "architect": {
         "build": {
@@ -21,12 +21,33 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "../angular-phonecat/app"
             ],
             "styles": [
+              "../angular-phonecat/app/lib/bootstrap/dist/css/bootstrap.css",
+              "../angular-phonecat/app/app.css",
+              "../angular-phonecat/app/app.animations.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../angular-phonecat/app/lib/jquery/dist/jquery.js",
+              "../angular-phonecat/app/lib/angular/angular.js",
+              "../angular-phonecat/app/lib/angular-animate/angular-animate.js",
+              "../angular-phonecat/app/lib/angular-resource/angular-resource.js",
+              "../angular-phonecat/app/lib/angular-route/angular-route.js",
+              "../angular-phonecat/app/app.module.js",
+              "../angular-phonecat/app/app.config.js",
+              "../angular-phonecat/app/app.animations.js",
+              "../angular-phonecat/app/core/core.module.js",
+              "../angular-phonecat/app/core/checkmark/checkmark.filter.js",
+              "../angular-phonecat/app/core/phone/phone.module.js",
+              "../angular-phonecat/app/core/phone/phone.service.js",
+              "../angular-phonecat/app/phone-list/phone-list.module.js",
+              "../angular-phonecat/app/phone-list/phone-list.component.js",
+              "../angular-phonecat/app/phone-detail/phone-detail.module.js",
+              "../angular-phonecat/app/phone-detail/phone-detail.component.js"
+            ]
           },
           "configurations": {
             "production": {
