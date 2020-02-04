@@ -7,10 +7,14 @@ import { HomeComponent } from './home/home.component';
 import {RouterModule, UrlHandlingStrategy, UrlTree} from '@angular/router';
 import {PhoneService} from './phone.service';
 import {HttpClientModule} from '@angular/common/http';
+import { PhoneListComponent } from './phone-list/phone-list.component';
+import {FormsModule} from '@angular/forms';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree): boolean {
-    const shouldProcess = url.toString().startsWith('/home') || url.toString() === '/';
+    const shouldProcess = url.toString() === '/home' ||
+                          url.toString() === '/phones' ||
+                          url.toString() === '/';
     console.log('CustomHandlingStrategy.shouldProcessUrl shouldProcess:', shouldProcess, url.toString());
     return shouldProcess;
   }
@@ -27,16 +31,22 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PhoneListComponent
   ],
   imports: [
     BrowserModule,
     UpgradeModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'phones',
+        component: PhoneListComponent
       },
       {
         path: '',
