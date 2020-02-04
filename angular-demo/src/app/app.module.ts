@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {UpgradeModule} from '@angular/upgrade/static';
 import { HomeComponent } from './home/home.component';
 import {RouterModule, UrlHandlingStrategy, UrlTree} from '@angular/router';
+import {PhoneService} from './phone.service';
+import {HttpClientModule} from '@angular/common/http';
 
 export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree): boolean {
@@ -30,6 +32,7 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
   imports: [
     BrowserModule,
     UpgradeModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: 'home',
@@ -46,6 +49,7 @@ export class CustomHandlingStrategy implements UrlHandlingStrategy {
     })
   ],
   providers: [
+    PhoneService,
     { provide: UrlHandlingStrategy, useClass: CustomHandlingStrategy }
   ],
   bootstrap: [AppComponent]

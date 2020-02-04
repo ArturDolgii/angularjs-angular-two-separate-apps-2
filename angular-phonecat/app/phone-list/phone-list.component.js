@@ -7,7 +7,10 @@ angular.
     templateUrl: 'angular-phonecat/app/phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
-        this.phones = Phone.query();
+        var self = this;
+        Phone.query().toPromise().then(function(phones) {
+          self.phones = phones;
+        });
         this.orderProp = 'age';
       }
     ]

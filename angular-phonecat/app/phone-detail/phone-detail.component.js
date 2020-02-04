@@ -8,7 +8,8 @@ angular.
     controller: ['$routeParams', 'Phone',
       function PhoneDetailController($routeParams, Phone) {
         var self = this;
-        self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+        Phone.get($routeParams.phoneId).toPromise().then(function(phone) {
+          self.phone = phone;
           self.setImage(phone.images[0]);
         });
 

@@ -41,8 +41,6 @@
               "../angular-phonecat/app/app.animations.js",
               "../angular-phonecat/app/core/core.module.js",
               "../angular-phonecat/app/core/checkmark/checkmark.filter.js",
-              "../angular-phonecat/app/core/phone/phone.module.js",
-              "../angular-phonecat/app/core/phone/phone.service.js",
               "../angular-phonecat/app/phone-list/phone-list.module.js",
               "../angular-phonecat/app/phone-list/phone-list.component.js",
               "../angular-phonecat/app/phone-detail/phone-detail.module.js",
