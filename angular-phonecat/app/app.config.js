@@ -2,15 +2,15 @@
 
 angular.
   module('phonecatApp').
-  config(['$routeProvider',
-    function config($routeProvider) {
+  config(['$routeProvider', '$locationProvider',
+    function config($routeProvider, $locationProvider) {
+      $locationProvider.hashPrefix('');
       $routeProvider.
         when('/phones', {
           template: '<phone-list></phone-list>'
         }).
         when('/phones/:phoneId', {
           template: '<phone-detail></phone-detail>'
-        }).
-        otherwise('/phones');
+        });
     }
   ]);
